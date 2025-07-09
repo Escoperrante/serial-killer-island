@@ -1,0 +1,44 @@
+print(r'''
+             ,____           ,____           ,____           ,____
+          ___     |---.\  ___     |---.\  ___     |---.\  ___     |---.\
+         / .-\  _/=)   ` / .-\  _/=)   ` / .-\  _/=)   ` / .-\  _/=)   `
+        |  |"|_/\/|     |  |"|_/\/|     |  |"|_/\/|     |  |"|_/\/|
+        ;  |-;| /_|     ;  |-;| /_|     ;  |-;| /_|     ;  |-;| /_|
+       / \_| |/ \ |    / \_| |/ \ |    / \_| |/ \ |    / \_| |/ \ |
+      /      \/\( |   /      \/\( |   /      \/\( |   /      \/\( |
+      |   /  |` ) |   |   /  |` ) |   |   /  |` ) |   |   /  |` ) |
+      /   \ _/    |   /   \ _/    |   /   \ _/    |   /   \ _/    |
+     /--._/  \    |  /--._/  \    |  /--._/  \    |  /--._/  \    |
+     `/|)    |    /  `/|)    |    /  `/|)    |    /  `/|)    |    /
+       /     |   |     /     |   |     /     |   |     /     |   |
+ jgs .'      |   |   .'      |   |   .'      |   |   .'      |   |
+    /         \  |  /         \  |  /         \  |  /         \  |
+   (_.-.__.__./  / (_.-.__.__./  / (_.-.__.__./  / (_.-.__.__./  /
+
+''')
+print("Welcome to Serial Killer Island.")
+print("Your mission is to escape the Serial Killer.")
+choice1 = input('A man with a big knife is coming towards your way. Do you "stay put", or do you "run"?').lower()
+
+if choice1 == "run":
+    choice2 = input('You see an alley to your left. Do you "keep running" or "turn left"?').lower()
+
+    if choice2 == "keep running":
+        print("The serial killer is faster than you, he catches up. Game over.")
+    elif choice2 in ["turn left", "left"]:
+       choice3 = input('Upon entering the alley, you face three doors: a "red" one, a "blue" and a "yellow". Which door do you choose?').lower()
+
+       if choice3 == "red":
+            print("You stumble over some stairs, fall and break your ankle. The serial killer catches up with you. Game over.")
+       elif choice3 == "yellow":
+            print("You run into a dead end. The serial killer catches up with you. Game over.")
+       elif choice3 == "blue":
+            print("You enter into the back door of a police station. An officer comes to your aid. You Win!")
+       else:
+           print("The door doesn\'t exist. Game over.")
+
+    else:
+        print("Option does not exist. Game over")
+
+else:
+    print("Too slow! The serial killer has stabbed you to death. Game over.")
